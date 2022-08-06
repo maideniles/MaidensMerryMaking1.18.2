@@ -1,0 +1,29 @@
+{
+  
+  "type": "maidensmerrymaking:pot_o_gold",
+
+  "config": {
+  
+    "start_pool": "maidensmerrymaking:pot_o_gold/start_pool",
+
+
+    "size": 1
+  },
+
+
+  "biomes": "#maidensmerrymaking:has_structure/pot_o_gold_biomes",
+
+
+  "adapt_noise": false,
+
+
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": [
+        
+        
+      ]
+    }
+  }
+} 

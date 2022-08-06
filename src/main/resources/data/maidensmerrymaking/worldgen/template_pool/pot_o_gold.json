@@ -1,0 +1,27 @@
+{
+ 
+
+
+  "name": "maidensmerrymaking:pot_o_gold",
+
+
+  "fallback": "minecraft:empty",
+
+ 
+  "elements": [
+    {
+  
+      "weight": 1,
+      "element": {
+
+   
+        "location": "maidensmerrymaking:pot_o_gold",
+
+     
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+} 
