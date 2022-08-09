@@ -3,6 +3,7 @@ package com.maideniles.maidensmerrymaking.init;
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.entity.custom.ColoredBunnyEntity;
 import com.maideniles.maidensmerrymaking.entity.custom.ColoredChickenEntity;
+import com.maideniles.maidensmerrymaking.entity.halloween.ZombieCostumeEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -103,9 +104,16 @@ public class ModEntityTypes {
     //CHICKEN//
     public static final RegistryObject<EntityType<ColoredChickenEntity>> COLORED_CHICKEN = ENTITY_TYPES.register("colored_chicken",
             () -> EntityType.Builder.of(ColoredChickenEntity::new, MobCategory.CREATURE)
-                    .sized(0.4f, 0.7f)
+                    .sized(0.4f, 0.95f)
                     .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "colored_chicken").toString()));
 
+    //HALLOWEEN COSTUMED MOBS//
+
+
+    public static final RegistryObject<EntityType<ZombieCostumeEntity>> COSTUMED_ZOMBIE = ENTITY_TYPES.register("costumed_zombie",
+            () -> EntityType.Builder.of(ZombieCostumeEntity::new, MobCategory.CREATURE)
+                    .sized(0.6f, 0.95f)
+                    .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "costumed_zombie").toString()));
 
 
     public static void register(IEventBus eventBus) {
