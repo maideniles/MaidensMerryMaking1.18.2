@@ -104,7 +104,7 @@ public class ModEntityTypes {
     //CHICKEN//
     public static final RegistryObject<EntityType<ColoredChickenEntity>> COLORED_CHICKEN = ENTITY_TYPES.register("colored_chicken",
             () -> EntityType.Builder.of(ColoredChickenEntity::new, MobCategory.CREATURE)
-                    .sized(0.4f, 0.95f)
+                    .sized(0.4f, 0.7f)
                     .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "colored_chicken").toString()));
 
     //HALLOWEEN COSTUMED MOBS//
