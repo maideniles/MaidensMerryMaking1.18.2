@@ -347,6 +347,9 @@ public class ModItems {
     public static final RegistryObject<Item> BUNNY_FACE = ITEMS.register("bunny_face",
             () -> new Item(new Item.Properties().tab(null)));
 
+//ADD HALLOWEEN COSTUMED MOB SPAWN EGGS//
+
+    public static final RegistryObject<Item> COSTUMED_ZOMBIE_SPAWN_EGG = ITEMS.register("costumed_zombie_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_ZOMBIE.get(), 7836928, 16777215,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
 
     public static void register(IEventBus eventBus) {

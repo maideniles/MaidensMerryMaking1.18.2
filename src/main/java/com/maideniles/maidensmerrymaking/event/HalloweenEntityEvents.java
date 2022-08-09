@@ -25,6 +25,7 @@ import java.util.List;
 public class HalloweenEntityEvents {
 
     @SubscribeEvent(priority =  EventPriority.HIGH)
+    //NOT SPAWNING NEW MOB IN NATURALLY YET
     public static void addSpawn(BiomeLoadingEvent event) {
         Biome biome = ForgeRegistries.BIOMES.getValue(event.getName());
         if(biome != null) {

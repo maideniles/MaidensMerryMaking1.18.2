@@ -107,7 +107,7 @@ public class ModEntityTypes {
                     .sized(0.4f, 0.7f)
                     .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "colored_chicken").toString()));
 
-    //HALLOWEEN COSTUMED MOBS//
+    //ADD HALLOWEEN COSTUMED MOBS//
 
 
     public static final RegistryObject<EntityType<ZombieCostumeEntity>> COSTUMED_ZOMBIE = ENTITY_TYPES.register("costumed_zombie",

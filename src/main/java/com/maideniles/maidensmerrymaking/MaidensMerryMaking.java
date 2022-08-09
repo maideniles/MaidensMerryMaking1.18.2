@@ -53,7 +53,7 @@ public class MaidensMerryMaking {
         ModStructures.register(eventBus);
 
 
-
+    //HALLOWEEN COSTUMED MOBS
         eventBus.addListener(HalloweenEntityEvents::registerEntityAttributes);
 
         eventBus.addListener(this::setup);
@@ -67,6 +67,7 @@ public class MaidensMerryMaking {
 
 
         event.enqueueWork(() -> {
+            //HALLOWEEN COSTUMED MOBS
             HalloweenEntityEvents.initializeMobs();
 
             EntityRenderers.register(ModEntityTypes.COLORED_CHICKEN.get(), ColoredChickenRenderer::new);

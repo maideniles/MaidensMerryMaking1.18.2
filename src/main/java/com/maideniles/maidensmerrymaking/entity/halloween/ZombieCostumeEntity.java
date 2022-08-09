@@ -19,6 +19,7 @@ public class ZombieCostumeEntity extends Zombie {
     }
 
     protected void registerGoals() {
+        //REMOVED TURTLE ATTACK GOAL DUE TO ACCESS
             this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.addBehaviourGoals();

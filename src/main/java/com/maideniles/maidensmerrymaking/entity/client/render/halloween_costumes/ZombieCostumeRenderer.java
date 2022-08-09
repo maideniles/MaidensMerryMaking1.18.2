@@ -14,6 +14,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class ZombieCostumeRenderer extends MobRenderer<Zombie, ZombieModel<Zombie>> {
+
+    //HALLOWEEN COSTUME LOCATION--COSTUME DECIDE LATER
     private static final ResourceLocation COSTUME_LOCATION = new ResourceLocation(MaidensMerryMaking.MOD_ID, "textures/entity/halloween/zombie_costume.png");
 
     public ZombieCostumeRenderer(EntityRendererProvider.Context p_173952_) {
