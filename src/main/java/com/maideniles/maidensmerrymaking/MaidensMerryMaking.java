@@ -2,7 +2,7 @@ package com.maideniles.maidensmerrymaking;
 
 import com.maideniles.maidensmerrymaking.client.RenderLayers;
 import com.maideniles.maidensmerrymaking.entity.client.render.*;
-import com.maideniles.maidensmerrymaking.entity.client.render.halloween_costumes.ZombieCostumeRenderer;
+import com.maideniles.maidensmerrymaking.entity.client.render.halloween_costumes.*;
 import com.maideniles.maidensmerrymaking.entity.render.ColoredChickenRenderer;
 import com.maideniles.maidensmerrymaking.event.HalloweenEntityEvents;
 import com.maideniles.maidensmerrymaking.init.*;
@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -39,7 +40,7 @@ public class MaidensMerryMaking {
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, MerryMakingConfig.CLIENT_CONFIG);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, MerryMakingConfig.SERVER_CONFIG);
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+
 
 
 
@@ -58,6 +59,7 @@ public class MaidensMerryMaking {
 
         eventBus.addListener(this::setup);
 
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -65,6 +67,8 @@ public class MaidensMerryMaking {
     // add a comment
     public void setup(final FMLCommonSetupEvent event) {
 
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+        forgeBus.addListener(HalloweenEntityEvents::setupStructureSpawns);
 
         event.enqueueWork(() -> {
             //HALLOWEEN COSTUMED MOBS
@@ -93,6 +97,17 @@ public class MaidensMerryMaking {
             EntityRenderers.register(ModEntityTypes.YELLOW_BUNNY_LARGE.get(), YellowBunnyRendererLarge::new);
 //HALLOWEEN//
             EntityRenderers.register(ModEntityTypes.COSTUMED_ZOMBIE.get(), ZombieCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_SKELETON.get(), SkeletonCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_WITHER_SKELETON.get(), WitherSkeletonCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_HUSK.get(), HuskCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_DROWNED.get(), DrownedCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_ZOMBIE_VILLAGER.get(), ZombieVillagerCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_PILLAGER.get(), PillagerCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_VINDICATOR.get(), VindicatorCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_EVOKER.get(), EvokerCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_WITCH.get(), WitchCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_CREEPER.get(), CreeperCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_SPIDER.get(), SpiderCostumeRenderer::new);
         });
 
         // some preinit code

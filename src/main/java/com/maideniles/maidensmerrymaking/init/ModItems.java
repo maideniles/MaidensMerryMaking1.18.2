@@ -351,6 +351,28 @@ public class ModItems {
 
     public static final RegistryObject<Item> COSTUMED_ZOMBIE_SPAWN_EGG = ITEMS.register("costumed_zombie_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_ZOMBIE.get(), 7836928, 16777215,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
+    public static final RegistryObject<Item> COSTUMED_SKELETON_SPAWN_EGG = ITEMS.register("costumed_skeleton_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_SKELETON.get(), 12367527, 11418760,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_WITHER_SKELETON_SPAWN_EGG = ITEMS.register("costumed_wither_skeleton_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_WITHER_SKELETON.get(), 3881787, 11418760,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_HUSK_SPAWN_EGG = ITEMS.register("costumed_husk_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_HUSK.get(), 14408133, 7827024,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_DROWNED_SPAWN_EGG = ITEMS.register("costumed_drowned_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_DROWNED.get(), 7580060, 5579309,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_ZOMBIE_VILLAGER_SPAWN_EGG = ITEMS.register("costumed_zombie_villager_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_ZOMBIE_VILLAGER.get(), 4151336, 1451585,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_PILLAGER_SPAWN_EGG = ITEMS.register("costumed_pillager_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_PILLAGER.get(), 10919858, 1315860,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_EVOKER_SPAWN_EGG = ITEMS.register("costumed_evoker_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_EVOKER.get(), 328965, 10392188,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_VINDICATOR_SPAWN_EGG = ITEMS.register("costumed_vindicator_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_VINDICATOR.get(), 16382968, 3878472,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_WITCH_SPAWN_EGG = ITEMS.register("costumed_witch_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_WITCH.get(), 16043186, 16316664,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_CREEPER_SPAWN_EGG = ITEMS.register("costumed_creeper_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_CREEPER.get(), 11644326, 7235936,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> COSTUMED_SPIDER_SPAWN_EGG = ITEMS.register("costumed_spider_spawn_egg", () -> new ForgeSpawnEggItem(() -> ModEntityTypes.COSTUMED_SPIDER.get(), 2498587, 15234561,  new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

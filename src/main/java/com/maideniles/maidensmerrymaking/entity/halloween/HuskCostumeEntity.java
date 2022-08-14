@@ -1,32 +1,25 @@
 package com.maideniles.maidensmerrymaking.entity.halloween;
 
-
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.animal.Turtle;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.Husk;
 import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-
-
-
-public class ZombieCostumeEntity extends Zombie {
-
-
-
-    public ZombieCostumeEntity(EntityType<? extends Zombie> p_34271_, Level p_34272_) {
-        super(p_34271_, p_34272_);
+public class HuskCostumeEntity extends Husk {
+    public HuskCostumeEntity(EntityType<? extends Husk> p_32889_, Level p_32890_) {
+        super(p_32889_, p_32890_);
     }
 
     protected void registerGoals() {
 
-            this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
+        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
         this.addBehaviourGoals();
     }
@@ -41,11 +34,4 @@ public class ZombieCostumeEntity extends Zombie {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
         this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, Turtle.class, 10, true, false, Turtle.BABY_ON_LAND_SELECTOR));
     }
-
-
-
-
-
-
-
 }
