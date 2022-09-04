@@ -1,22 +1,19 @@
 package com.maideniles.maidensmerrymaking.world.feature.flower;
 
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.InclusiveRange;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
+import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.DualNoiseProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.NoiseProvider;
-import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
 import java.util.List;
@@ -39,6 +36,9 @@ public class ModConfiguredFlowers {
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> HYACINTH_CONFIG = FeatureUtils.register("hyacinth_config",
             Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.HYACINTH_BLOCK.get()))));
+
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> GRAVESTONE_CONFIG = FeatureUtils.register("gravestone_config",
+            Feature.FLOWER, grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.GRAVESTONE_PLAIN.get().defaultBlockState(), 1).add(ModBlocks.GRAVESTONE_CROSS.get().defaultBlockState(), 1).add(ModBlocks.GRAVESTONE_OBELISK.get().defaultBlockState(), 1).add(ModBlocks.GRAVESTONE_TOPPED.get().defaultBlockState(), 1)), 64));
 
 
 
@@ -91,4 +91,7 @@ public class ModConfiguredFlowers {
                                     ModBlocks.YELLOW_WHITE_FLOWERS_EASTER_EGG_GEN_BLOCK.get().defaultBlockState(),
                                     ModBlocks.YELLOW_ZIGZAG_EASTER_EGG_GEN_BLOCK.get().defaultBlockState()))))));
 
+    private static RandomPatchConfiguration grassPatch(BlockStateProvider p_195203_, int p_195204_) {
+        return FeatureUtils.simpleRandomPatchConfiguration(p_195204_, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(p_195203_)));
+    }
 }

@@ -49,7 +49,7 @@ public class ModFeatures {
 
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> HOLLY_TREE =
-            FeatureUtils.register("spruce", Feature.TREE,
+            FeatureUtils.register("holly_tree", Feature.TREE,
                     (new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(Blocks.SPRUCE_LOG),
                             new StraightTrunkPlacer(5, 2, 1), BlockStateProvider.simple(ModBlocks.SPRUCE_LEAVES_HOLLY.get()),
                             new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2),

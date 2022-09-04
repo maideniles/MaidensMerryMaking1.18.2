@@ -2,16 +2,15 @@ package com.maideniles.maidensmerrymaking.init;
 
 
 import com.maideniles.maidensmerrymaking.world.feature.flower.ModConfiguredFlowers;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.placement.BiomeFilter;
-import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.RarityFilter;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
+import net.minecraft.world.level.levelgen.placement.*;
 
 
 import static net.minecraft.data.worldgen.placement.TreePlacements.SNOW_TREE_FILTER_DECORATOR;
@@ -36,6 +35,7 @@ public class ModPlacements {
 
     public static final Holder<PlacedFeature> HYACINTH_PLACEMENT = PlacementUtils.register("hyacinth_placement", ModConfiguredFlowers.HYACINTH_CONFIG, InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
+    public static final Holder<PlacedFeature> GRAVESTONE_PLACEMENT = PlacementUtils.register("gravestone_placement", ModConfiguredFlowers.GRAVESTONE_CONFIG, PlacementUtils.countExtra(0, 0.01F, 1), InSquarePlacement.spread(),VegetationPlacements.TREE_THRESHOLD, PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(Blocks.OAK_SAPLING.defaultBlockState(), BlockPos.ZERO)), BiomeFilter.biome());
 
 
 

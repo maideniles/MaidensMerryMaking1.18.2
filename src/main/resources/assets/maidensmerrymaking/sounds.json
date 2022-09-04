@@ -16,5 +16,14 @@
         "stream": true
       }
     ]
+  },
+  
+   "halloween_disc": {
+    "sounds": [
+      {
+        "name": "maidensmerrymaking:halloween_disc",
+        "stream": true
+      }
+    ]
   }
 }

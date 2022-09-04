@@ -521,6 +521,14 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYDRANGEA_POTTED.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYACINTH_BLOCK.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYACINTH_POTTED.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAVESTONE_PLAIN.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAVESTONE_OBELISK.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAVESTONE_CROSS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAVESTONE_TOPPED.get(), RenderType.cutoutMipped());
+
+
+
+
 
 
 

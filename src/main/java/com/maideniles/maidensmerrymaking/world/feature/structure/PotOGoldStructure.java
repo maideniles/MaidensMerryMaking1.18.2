@@ -88,7 +88,7 @@ public class PotOGoldStructure extends StructureFeature<JigsawConfiguration> {
         // into the ocean if it is a super deep ocean.
         int topLandY = context.chunkGenerator().getFirstFreeHeight(blockpos.getX(), blockpos.getZ(),
                 Heightmap.Types.WORLD_SURFACE_WG, context.heightAccessor());
-        blockpos = blockpos.above(topLandY + 60);
+        blockpos = blockpos.above(topLandY + 0);
 
         Optional<PieceGenerator<JigsawConfiguration>> structurePiecesGenerator =
                 JigsawPlacement.addPieces(

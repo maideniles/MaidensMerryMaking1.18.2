@@ -101,6 +101,7 @@ public class MaidensMerryMaking {
             EntityRenderers.register(ModEntityTypes.COSTUMED_WITHER_SKELETON.get(), WitherSkeletonCostumeRenderer::new);
             EntityRenderers.register(ModEntityTypes.COSTUMED_HUSK.get(), HuskCostumeRenderer::new);
             EntityRenderers.register(ModEntityTypes.COSTUMED_DROWNED.get(), DrownedCostumeRenderer::new);
+            EntityRenderers.register(ModEntityTypes.COSTUMED_DROWNED_MERMAID.get(), DrownedMermaidCostumeRenderer::new);
             EntityRenderers.register(ModEntityTypes.COSTUMED_ZOMBIE_VILLAGER.get(), ZombieVillagerCostumeRenderer::new);
             EntityRenderers.register(ModEntityTypes.COSTUMED_PILLAGER.get(), PillagerCostumeRenderer::new);
             EntityRenderers.register(ModEntityTypes.COSTUMED_VINDICATOR.get(), VindicatorCostumeRenderer::new);

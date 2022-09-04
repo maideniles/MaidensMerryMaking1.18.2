@@ -125,7 +125,7 @@ public class PresentBlock extends Block {
 
     }
 
-    static int inclusiveBoundedRandom(Random random, int min, int max) {
+    public static int inclusiveBoundedRandom(Random random, int min, int max) {
         return min + random.nextInt(max-min);
     }
 }

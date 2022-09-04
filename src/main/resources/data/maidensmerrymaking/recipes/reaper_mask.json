@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "maidensmerrymaking:reaper_mask"
+    },
+    "addition": {
+        "item": "minecraft:netherite_ingot"
+    },
+    "result": {
+        "item": "maidensmerrymaking:reinforced_reaper_mask"
+    }
+}

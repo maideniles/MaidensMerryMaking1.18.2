@@ -20,6 +20,9 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> CHRISTMAS_MUSIC_DISC_2 =
             registerSoundEvent("christmas_disc_2");
 
+    public static final RegistryObject<SoundEvent> HALLOWEEN_MUSIC_DISC =
+                registerSoundEvent("halloween_disc");
+
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(MaidensMerryMaking.MOD_ID, name)));

@@ -5,7 +5,9 @@
     
     "pattern":
     [
-        "LLL"
+        "L L",
+		" L ",
+		"L  "
 		
 		
 		
@@ -18,7 +20,7 @@
 		"L":
 		{
 			
-			"item": "minecraft:spruce_leaves"
+			"item": "maidensmerrymaking:garland_horizontal"
 		}
 		
 		
@@ -28,7 +30,7 @@
     
     "result":
     {
-        "item": "maidensmerrymaking:garland_horizontal",
+        "item": "maidensmerrymaking:garland_diagonal_left",
         "count": 4
     }
 }

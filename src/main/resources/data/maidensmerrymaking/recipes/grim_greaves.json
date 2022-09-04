@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "maidensmerrymaking:grim_greaves"
+    },
+    "addition": {
+        "item": "minecraft:netherite_ingot"
+    },
+    "result": {
+        "item": "maidensmerrymaking:reinforced_grim_greaves"
+    }
+}

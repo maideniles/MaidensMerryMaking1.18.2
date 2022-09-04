@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		
+		
+		
+		
+		
+		
+		
+		
+		{
+			"item": "maidensmerrymaking:popcorn"
+		},
+		
+		{
+			"item": "maidensmerrymaking:caramel"
+		}
+		
+		
+		
+		
+		
+	],
+	"result": {
+		"item": "maidensmerrymaking:caramel_popcorn",
+		"count": 1
+	}
+}

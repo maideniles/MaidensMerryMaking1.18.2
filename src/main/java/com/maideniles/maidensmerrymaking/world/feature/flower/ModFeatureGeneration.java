@@ -19,6 +19,8 @@ public class ModFeatureGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
 
+
+
         //EASTER LILY IN JUNGLE AND SAVANNAH//
         if (event.getCategory() == Biome.BiomeCategory.JUNGLE || event.getCategory() == Biome.BiomeCategory.SAVANNA) {
 
@@ -31,6 +33,8 @@ public class ModFeatureGeneration {
         if (event.getCategory() == Biome.BiomeCategory.PLAINS) {
             if (MerryMakingConfig.ST_PATRICKS_DAY_ENABLED.get() == Boolean.TRUE) {
                 event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacements.CLOVER_PLACEMENT);
+                event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacements.GRAVESTONE_PLACEMENT);
+
             }
 
         }

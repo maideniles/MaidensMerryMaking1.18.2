@@ -130,6 +130,11 @@ public class ModEntityTypes {
                     .sized(0.6f, 0.95f)
                     .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "costumed_drowned").toString()));
 
+    public static final RegistryObject<EntityType<DrownedCostumeEntity>> COSTUMED_DROWNED_MERMAID = ENTITY_TYPES.register("costumed_drowned_mermaid",
+            () -> EntityType.Builder.of(DrownedCostumeEntity::new, MobCategory.CREATURE)
+                    .sized(0.6f, 0.95f)
+                    .build(new ResourceLocation(MaidensMerryMaking.MOD_ID, "costumed_drowned_mermaid").toString()));
+
     public static final RegistryObject<EntityType<HuskCostumeEntity>> COSTUMED_HUSK = ENTITY_TYPES.register("costumed_husk",
             () -> EntityType.Builder.of(HuskCostumeEntity::new, MobCategory.CREATURE)
                     .sized(0.6f, 0.95f)

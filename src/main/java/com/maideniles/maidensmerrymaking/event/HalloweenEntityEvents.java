@@ -43,6 +43,7 @@ public class HalloweenEntityEvents {
                 registerSpawn(spawns, entry, EntityType.SKELETON, ModEntityTypes.COSTUMED_SKELETON.get());
                 registerSpawn(spawns, entry, EntityType.WITHER_SKELETON, ModEntityTypes.COSTUMED_WITHER_SKELETON.get());
                 registerSpawn(spawns, entry, EntityType.DROWNED, ModEntityTypes.COSTUMED_DROWNED.get());
+                registerSpawn(spawns, entry, EntityType.DROWNED, ModEntityTypes.COSTUMED_DROWNED_MERMAID.get());
                 registerSpawn(spawns, entry, EntityType.HUSK, ModEntityTypes.COSTUMED_HUSK.get());
                 registerSpawn(spawns, entry, EntityType.ZOMBIE_VILLAGER, ModEntityTypes.COSTUMED_ZOMBIE_VILLAGER.get());
                 registerSpawn(spawns, entry, EntityType.PILLAGER, ModEntityTypes.COSTUMED_PILLAGER.get());
@@ -62,6 +63,8 @@ public class HalloweenEntityEvents {
         SpawnPlacements.register(ModEntityTypes.COSTUMED_WITHER_SKELETON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.COSTUMED_HUSK.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.COSTUMED_DROWNED.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
+        SpawnPlacements.register(ModEntityTypes.COSTUMED_DROWNED_MERMAID.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
+
         SpawnPlacements.register(ModEntityTypes.COSTUMED_ZOMBIE_VILLAGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.COSTUMED_PILLAGER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.COSTUMED_VINDICATOR.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
@@ -85,6 +88,7 @@ public class HalloweenEntityEvents {
         event.put(ModEntityTypes.COSTUMED_EVOKER.get(), Evoker.createAttributes().build());
         event.put(ModEntityTypes.COSTUMED_WITCH.get(), Witch.createAttributes().build());
         event.put(ModEntityTypes.COSTUMED_DROWNED.get(), Drowned.createAttributes().build());
+        event.put(ModEntityTypes.COSTUMED_DROWNED_MERMAID.get(), Drowned.createAttributes().build());
         event.put(ModEntityTypes.COSTUMED_CREEPER.get(), Creeper.createAttributes().build());
         event.put(ModEntityTypes.COSTUMED_SPIDER.get(), Spider.createAttributes().build());
 
