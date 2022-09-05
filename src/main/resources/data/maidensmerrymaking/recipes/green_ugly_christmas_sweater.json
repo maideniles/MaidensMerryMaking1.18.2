@@ -1,12 +1,31 @@
 {
-    "type": "minecraft:smithing",
-    "base": {
-        "item": "maidensmerrymaking:green_ugly_christmas_sweater"
-    },
-    "addition": {
-        "item": "minecraft:netherite_ingot"
-    },
-    "result": {
-        "item": "maidensmerrymaking:reinforced_green_ugly_christmas_sweater"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "maidensmerrymaking:christmas_enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+           "DWD",
+		   "DDD",
+           "DDD"
+        ],
+        "key": {
+          "W": {
+            "item": "minecraft:green_wool"
+          },
+          "D": {
+            "item": "minecraft:diamond"
+          }
+        },
+        "result": {
+          "item": "maidensmerrymaking:green_ugly_christmas_sweater"
+        }
+      }
     }
+  ]
 }

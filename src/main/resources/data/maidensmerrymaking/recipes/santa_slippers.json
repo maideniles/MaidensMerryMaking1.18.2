@@ -1,12 +1,31 @@
 {
-    "type": "minecraft:smithing",
-    "base": {
-        "item": "maidensmerrymaking:santa_slippers"
-    },
-    "addition": {
-        "item": "minecraft:netherite_ingot"
-    },
-    "result": {
-        "item": "maidensmerrymaking:reinforced_santa_slippers"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "maidensmerrymaking:christmas_enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+           "   ",
+		   "D D",
+		   "DWD"
+        ],
+        "key": {
+          "W": {
+            "item": "minecraft:red_wool"
+          },
+          "D": {
+            "item": "minecraft:diamond"
+          }
+        },
+        "result": {
+          "item": "maidensmerrymaking:santa_slippers"
+        }
+      }
     }
+  ]
 }

@@ -56,6 +56,9 @@ public class ModEventBusEvents {
                 new EasterChestLootModifier.Serializer().setRegistryName
                         (new ResourceLocation(MaidensMerryMaking.MOD_ID,"easter_chest_loot_modifier")),
 
+                new HalloweenChestLootModifier.Serializer().setRegistryName
+                        (new ResourceLocation(MaidensMerryMaking.MOD_ID,"halloween_chest_loot_modifier")),
+
         new ChestLootModifier.Serializer().setRegistryName
                 (new ResourceLocation(MaidensMerryMaking.MOD_ID,"chest_loot_modifier"))
 

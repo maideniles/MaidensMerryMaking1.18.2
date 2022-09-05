@@ -1,13 +1,15 @@
 {
-	"type": "minecraft:crafting_shapeless",
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "maidensmerrymaking:halloween_enabled"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
 	"ingredients": [
-		
-		
-		
-		
-		
-		
-		
 		
 		{
 			"item": "maidensmerrymaking:popcorn"
@@ -16,14 +18,12 @@
 		{
 			"item": "maidensmerrymaking:caramel"
 		}
-		
-		
-		
-		
-		
+			
 	],
-	"result": {
-		"item": "maidensmerrymaking:caramel_popcorn",
-		"count": 1
-	}
+        "result": {
+          "item": "maidensmerrymaking:caramel_popcorn"
+        }
+      }
+    }
+  ]
 }

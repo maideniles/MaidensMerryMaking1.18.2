@@ -24,7 +24,7 @@ public class ModItemGroups {
     public static final CreativeModeTab MAIDENS_HALLOWEEN_GROUP = new CreativeModeTab("maidens_halloween_group") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.CLOWN_MASK.get());
+            return new ItemStack(ModBlocks.GRAVESTONE_TOPPED.get());
         }
     };
 

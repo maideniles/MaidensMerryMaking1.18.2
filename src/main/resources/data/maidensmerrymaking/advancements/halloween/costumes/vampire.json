@@ -1,0 +1,57 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+	
+	"parent": "maidensmerrymaking:halloween/frightful_fashion",
+    "display": {
+        "title": {
+            "text": "Vampire Costume",
+            "color": "white"
+        },
+        "description": {
+            "text": "Find all the pieces to the Vampire Costume",
+			"color": "dark_red"
+        },
+        "icon": {
+            "item": "maidensmerrymaking:vampire_mask"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+   "criteria": {
+    "vampire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "maidensmerrymaking:vampire_mask"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:vampire_body"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:vampire_trousers"
+            ]
+          },
+          {
+            "items": [
+              "maidensmerrymaking:vampire_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vampire"
+    ]
+  ]
+   
+}

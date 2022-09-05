@@ -1,5 +1,6 @@
 package com.maideniles.maidensmerrymaking.world.feature.structure;
 
+import com.maideniles.maidensmerrymaking.util.MerryMakingConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.levelgen.structure.PostPlacementProcessor;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGenerator;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
+import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 
@@ -76,7 +78,7 @@ public class PotOGoldStructure extends StructureFeature<JigsawConfiguration> {
 
         // Check if the spot is valid for our structure. This is just as another method for cleanness.
         // Returning an empty optional tells the game to skip this spot as it will not generate the structure.
-        if (!PotOGoldStructure.isFeatureChunk(context)) {
+        if (!PotOGoldStructure.isFeatureChunk(context) || MerryMakingConfig.ST_PATRICKS_DAY_ENABLED.get() == Boolean.FALSE) {
             return Optional.empty();
         }
 

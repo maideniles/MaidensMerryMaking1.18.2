@@ -4,6 +4,7 @@ package com.maideniles.maidensmerrymaking.event;
 import com.google.common.collect.ImmutableList;
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.init.ModEntityTypes;
+import com.maideniles.maidensmerrymaking.util.MerryMakingConfig;
 import net.minecraft.data.worldgen.StructureFeatures;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -96,8 +97,10 @@ public class HalloweenEntityEvents {
     }
 
     public static void registerSpawn(List<MobSpawnSettings.SpawnerData> spawns, MobSpawnSettings.SpawnerData entry, EntityType<? extends LivingEntity> oldEntity, EntityType<? extends LivingEntity> newEntity) {
-        if(entry.type == oldEntity) {
-            spawns.add(new MobSpawnSettings.SpawnerData(newEntity, Math.min(25, entry.getWeight().asInt()), entry.minCount, entry.maxCount));
+        if(!MerryMakingConfig.COSTUMES_ENABLED.get() == Boolean.FALSE) {
+            if (entry.type == oldEntity) {
+                spawns.add(new MobSpawnSettings.SpawnerData(newEntity, Math.min(25, entry.getWeight().asInt()), entry.minCount, entry.maxCount));
+            }
         }
     }
 

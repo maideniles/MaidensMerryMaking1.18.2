@@ -31,12 +31,13 @@ public class ModFeatureGeneration {
 
         //CLOVER IN PLAINS//
         if (event.getCategory() == Biome.BiomeCategory.PLAINS) {
-            if (MerryMakingConfig.ST_PATRICKS_DAY_ENABLED.get() == Boolean.TRUE) {
+            if (MerryMakingConfig.CLOVER_ENABLED.get() == Boolean.TRUE) {
                 event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacements.CLOVER_PLACEMENT);
-                event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacements.GRAVESTONE_PLACEMENT);
-
             }
 
+            if(MerryMakingConfig.GRAVESTONES_ENABLED.get() == Boolean.TRUE) {
+                event.getGeneration().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacements.GRAVESTONE_PLACEMENT);
+            }
         }
 //HYDRANGEA IN HILLS/FOREST//
         if (event.getCategory() == Biome.BiomeCategory.FOREST || event.getCategory() == Biome.BiomeCategory.MOUNTAIN
