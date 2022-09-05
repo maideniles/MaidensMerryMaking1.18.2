@@ -1,0 +1,22 @@
+{
+    
+  "structures": [
+    {
+      "structure": "maidensmerrymaking:pot_o_gold",
+      "weight": 1
+    }
+  ],
+  "placement": {
+     
+    "salt": 1224466890,
+
+     
+    "spacing": 16,
+
+    
+    "separation": 6,
+
+   
+    "type": "minecraft:random_spread"
+  }
+}
